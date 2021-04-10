@@ -1,0 +1,56 @@
+{
+  "name": "backdrop",
+  "version": "1.0.0",
+  "description": "A backend service for backdrop",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "apollo-server-express": "^2.19.2",
+    "app-root-path": "^3.0.0",
+    "cors": "^2.8.5",
+    "cross-env": "^7.0.2",
+    "dotenv": "^8.2.0",
+    "esm": "^3.2.25",
+    "express": "^4.17.1",
+    "graphql": "^15.5.0",
+    "graphql-redis-subscriptions": "^2.3.1",
+    "helmet": "^3.22.0",
+    "morgan": "^1.10.0",
+    "valid-url": "^1.0.9",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-http": "^4.3.0",
+    "eslint": "^7.9.0",
+    "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "faker": "^4.1.0",
+    "graphql-tools": "^7.0.4",
+    "husky": "^4.3.0",
+    "mocha": "^8.1.3"
+  },
+  "scripts": {
+    "dev": "nodemon -r esm .",
+    "lint": "eslint --ext .js ./",
+    "start": "cross-env BACKDROP_NODE_ENV=production node -r esm .",
+    "test": "mocha -c -r esm test/**/*.test.js --timeout 12000 --exit",
+    "pretest": "npm run lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/addempsea/shortenurl-backend.git.git"
+  },
+  "keywords": [
+    "url",
+    "graphql"
+  ],
+  "author": "addempsea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/addempsea/shortenurl-backend.git/issues"
+  },
+  "homepage": "https://github.com/addempsea/shortenurl-backend.git#readme.md"
+}
