@@ -1,3 +1,4 @@
+import randomize from 'randomatic';
 import urlModel from '../model';
 import { constants } from '../utils';
 
@@ -19,26 +20,6 @@ export default class UrlService {
   }
 
   /**
-   * It generates a random characters.
-   * @static
-   * @private
-   * @memberof UrlService
-   * @returns {String} - A string.
-   */
-  static randSixAlphabet(length, current) {
-    current = current || '';
-    return length
-      ? UrlService.randSixAlphabet(
-        // eslint-disable-next-line no-plusplus
-        --length,
-        'ABCDEFGHIJKLMNOPQRSTUVWXTZabcdefghiklmnopqrstuvwxyz'.charAt(
-          Math.floor(Math.random() * 60)
-        ) + current
-      )
-      : current;
-  }
-
-  /**
    * It generates a unique url.
    * @static
    * @private
@@ -46,7 +27,7 @@ export default class UrlService {
    * @returns {String} - A unique string.
    */
   static generateUniqueUrl() {
-    const url = UrlService.randSixAlphabet(6).toLowerCase();
+    const url = randomize('a', 6);
     if (!UrlService.getLongUrl(url) && url.length === 6) {
       return url;
     }
