@@ -9,7 +9,9 @@ const app = express();
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers
+  resolvers,
+  playground: true,
+  introspection: true,
 });
 
 appConfig(app, server);
