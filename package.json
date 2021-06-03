@@ -29,7 +29,7 @@
     "eslint-config-airbnb-base": "^14.2.0",
     "eslint-plugin-import": "^2.22.0",
     "faker": "^4.1.0",
-    "graphql-tools": "^7.0.4",
+    "graphql-tools": "7.0.5",
     "husky": "^4.3.0",
     "mocha": "^8.1.3"
   },
